@@ -333,6 +333,7 @@ void Bless::_routing()
 			continue;
 		if ((it->second) == maxPriF)
 			continue;
+		it->second->pri=it->second->pri+1;
 		output_number = _rf(GetID(), it->second->dest, true) % 4;
 		if (_stage_1[output_number].count(_time) == 0)
 		{
